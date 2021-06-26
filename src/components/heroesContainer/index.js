@@ -1,15 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './index.css'
 import HeroIcon from '../../assets/ic_heroi.svg'
 import FavIcon01 from '../../assets/favorito_01.svg'
-import HeroArticle from '../heroArticle'
+import Hero from '../Hero'
+import Loading from '../Loading'
+import { useGlobalContext } from '../../context'
 
-const Heroes = function () {
+export default function HeroesContainer() {
+  const { heroes, loading } = useGlobalContext()
+  if (loading) {
+    return <Loading />
+  }
+  if (heroes.length < 1) {
+    return <h2 className='section-title'>nenhum herói foi encontrado</h2>
+  }
   return (
     <>
       <main>
         <div className='params-wrapper'>
-          <span>Encontrados 20 heróis</span>
+          <span>{`Encontrados ${heroes.length} heróis`}</span>
           <div className='params-order'>
             <img src={HeroIcon} alt='ícone herói' className='hero-icon' />
             <label htmlFor='orderByName' className='order-label'>
@@ -26,11 +35,11 @@ const Heroes = function () {
           </div>
         </div>
         <div className='heroes-container'>
-          <HeroArticle />
+          {heroes.map((hero) => {
+            return <Hero key={hero.id} {...hero} />
+          })}
         </div>
       </main>
     </>
   )
 }
-
-export default Heroes

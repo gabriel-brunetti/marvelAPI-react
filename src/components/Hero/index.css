@@ -1,0 +1,23 @@
+/* 
+--- HERO ARTICLE ---
+*/
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.hero-container > img {
+  border-bottom: 4px solid red;
+  margin-bottom: 0.7rem;
+  width: 100%;
+}
+
+.info-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fav-icon02 {
+  width: 1rem;
+}

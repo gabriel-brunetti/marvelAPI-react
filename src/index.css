@@ -77,10 +77,11 @@ p {
 main {
   width: 90vw;
   margin: 0 auto;
+  max-width: 1500px;
 }
 
 .header {
-  max-width: var(--max-width);
+  max-width: 1500px;
   text-align: center;
   display: flex;
   flex-direction: column;
