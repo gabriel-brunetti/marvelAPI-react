@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './index.css'
 import FavIcon02 from '../../assets/favorito_02.svg'

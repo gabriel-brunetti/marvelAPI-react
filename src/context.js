@@ -1,15 +1,4 @@
 import React, { useState, useContext, useCallback, useEffect } from 'react'
-import {
-  AxiosProvider,
-  Request,
-  Get,
-  Delete,
-  Head,
-  Post,
-  Put,
-  Patch,
-  withAxios,
-} from 'react-axios'
 import md5 from 'md5'
 import axios from 'axios'
 
