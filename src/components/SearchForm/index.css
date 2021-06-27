@@ -1,0 +1,25 @@
+/* SEARCH */
+.search-container {
+  max-width: 1500px;
+  width: 80vw;
+  display: flex;
+  background-color: rgb(255, 236, 236);
+  border-radius: 50px;
+  padding: 13px 20px;
+  margin-bottom: 30px;
+}
+
+.search-form > input {
+  background-color: rgb(255, 236, 236);
+  color: red;
+  border: none;
+  margin-left: 20px;
+}
+
+.search-form > input:focus {
+  outline: none;
+}
+
+.search-form > input::placeholder {
+  color: red;
+}

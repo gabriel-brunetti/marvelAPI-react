@@ -1,6 +1,6 @@
 import React from 'react'
-import SearchIcon from '../../assets/ic_busca_menor.svg'
 import MarvelIcon from '../../assets/logo.svg'
+import SearchForm from '../SearchForm'
 import './index.css'
 
 const Header = () => {
@@ -13,10 +13,7 @@ const Header = () => {
           Mergulhe no domínio deslumbrante de todos os personagens clássicos que
           você ama - e aqueles que você descobrirá em breve!
         </p>
-        <div className='search-container'>
-          <img src={SearchIcon} alt='ícone de busca' />
-          <input type='text' placeholder='Procure por heróis'></input>
-        </div>
+        <SearchForm />
       </section>
     </>
   )

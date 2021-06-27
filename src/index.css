@@ -72,66 +72,6 @@ p {
 
 /*  global classes */
 
-/* section */
-.header,
-main {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1500px;
-}
-
-.header {
-  max-width: 1500px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media screen and (min-width: 992px) {
-  .section {
-    width: 95vw;
-  }
-}
-
-/* HEADER */
-.header > img {
-  width: 40vw;
-}
-
-.header > h3 {
-  text-transform: uppercase;
-}
-
-.header > p {
-  font-size: 12px;
-}
-
-/* SEARCH */
-.search-container {
-  width: 80vw;
-  display: flex;
-  background-color: rgb(255, 236, 236);
-  border-radius: 50px;
-  padding: 13px 20px;
-  margin-bottom: 30px;
-}
-
-.search-container > input {
-  background-color: rgb(255, 236, 236);
-  color: red;
-  border: none;
-  margin-left: 20px;
-}
-
-.search-container > input:focus {
-  outline: none;
-}
-
-.search-container > input::placeholder {
-  color: red;
-}
-
 footer {
   background-color: red;
   height: 30px;
