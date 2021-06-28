@@ -38,6 +38,7 @@
 */
 
 .hero-section {
+  height: 100%;
   width: 90vw;
   margin: 0 auto;
   display: grid;
