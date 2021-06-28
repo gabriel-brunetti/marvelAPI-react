@@ -129,10 +129,7 @@ export default function SingleHero() {
             />
           </div>
           <Comics
-            url={`https${hero.comics.collectionURI.slice(
-              4,
-              hero.comics.collectionURI.length
-            )}`}
+            url={`https://cors-anywhere.herokuapp.com/${comics.resourceURI}`}
           />
         </section>
       </div>
