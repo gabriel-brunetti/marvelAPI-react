@@ -24,7 +24,7 @@ export default function SingleHero() {
 
   React.useEffect(() => {
     setSearchTerm('')
-    const url = `http://gateway.marvel.com/v1/public/characters/${id}`
+    const url = `https://gateway.marvel.com/v1/public/characters/${id}`
     setLoading(true)
     async function fetchHero() {
       try {

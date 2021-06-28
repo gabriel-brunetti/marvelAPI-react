@@ -15,7 +15,7 @@ const getStorageFavorites = () => {
 function App() {
   return (
     <>
-      <Router>
+      <Router basename='/luizalabs-teste'>
         <Switch>
           <Route exact path='/'>
             <Home />

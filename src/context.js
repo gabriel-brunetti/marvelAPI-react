@@ -9,7 +9,7 @@ import axios from 'axios'
 import paramsDefault from './utils/apiConnectionParams'
 import reducer from './reducer'
 
-const url = 'http://gateway.marvel.com/v1/public/characters'
+const url = 'https://gateway.marvel.com/v1/public/characters'
 
 const AppContext = React.createContext()
 
