@@ -31,7 +31,7 @@ const AppProvider = ({ children }) => {
   const removeFavorite = (e) => {
     e.stopPropagation()
     e.preventDefault()
-    const id = e.target.id
+    const id = Number(e.target.id)
     dispatch({ type: 'REMOVE_FAVORITE', payload: id })
   }
 
@@ -39,7 +39,7 @@ const AppProvider = ({ children }) => {
     e.stopPropagation()
     e.preventDefault()
     const name = e.target.name
-    const id = e.target.id
+    const id = Number(e.target.id)
     const image = document.getElementById(`${id}portrait`).src
     const hero = { name, id, image }
     dispatch({ type: 'ADD_FAVORITE', payload: hero })

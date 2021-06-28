@@ -4,7 +4,6 @@ import Loading from '../Loading'
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import FavIcon02 from '../../assets/favorito_02.svg'
 import QuadrinhoIcon from '../../assets/ic_quadrinhos.svg'
 import MoviesIcon from '../../assets/ic_trailer.svg'
 import RatingIcons from '../../assets/avaliacao_on.svg'
@@ -12,10 +11,13 @@ import Comics from '../Comics'
 import params from '../../utils/apiConnectionParams'
 import logoMenor from '../../assets/logo_menor.svg'
 import SearchForm from '../SearchForm'
+import EmptyHeartIcon from '../../assets/favorito_02.svg'
+import FilledHeartIcon from '../../assets/favorito_01.svg'
 import { useGlobalContext } from '../../context'
 
 export default function SingleHero() {
-  const { setSearchTerm } = useGlobalContext()
+  const { setSearchTerm, removeFavorite, addFavorite, favorites } =
+    useGlobalContext()
   const { id } = useParams()
   const [loading, setLoading] = React.useState(false)
   const [hero, setHero] = React.useState(null)
@@ -71,9 +73,24 @@ export default function SingleHero() {
             <div className='info-title'>
               <h3>{name}</h3>
               <img
-                src={FavIcon02}
-                alt='ícone não-favorito'
-                className='fav-icon02'
+                src={
+                  favorites.find((item) => item.id === Number(id))
+                    ? FilledHeartIcon
+                    : EmptyHeartIcon
+                }
+                alt={
+                  favorites.find((item) => item.id === Number(id))
+                    ? 'icone favorito'
+                    : 'ícone não-favorito'
+                }
+                className='favorite-icon'
+                id={id}
+                name={name}
+                onClick={
+                  favorites.find((item) => item.id === Number(id))
+                    ? removeFavorite
+                    : addFavorite
+                }
               />
             </div>
             <div className='info'>
@@ -104,7 +121,12 @@ export default function SingleHero() {
             </div>
           </div>
           <div className='portrait-wrapper'>
-            <img src={image} alt={name} className='hero-portrait' />
+            <img
+              src={image}
+              alt={name}
+              className='hero-portrait'
+              id={`${id}portrait`}
+            />
           </div>
           <Comics url={comics.collectionURI} />
         </section>

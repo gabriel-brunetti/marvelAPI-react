@@ -16,12 +16,12 @@ const Hero = function ({ id, name, image }) {
           <span>{name}</span>
           <img
             src={
-              favorites.find((item) => Number(item.id) === id)
+              favorites.find((item) => item.id === id)
                 ? FilledHeartIcon
                 : EmptyHeartIcon
             }
             alt={
-              favorites.find((item) => Number(item.id) === id)
+              favorites.find((item) => item.id === id)
                 ? 'icone favorito'
                 : 'ícone não-favorito'
             }
@@ -29,7 +29,7 @@ const Hero = function ({ id, name, image }) {
             id={id}
             name={name}
             onClick={
-              favorites.find((item) => Number(item.id) === id)
+              favorites.find((item) => item.id === id)
                 ? removeFavorite
                 : addFavorite
             }
