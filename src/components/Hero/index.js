@@ -1,19 +1,38 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './index.css'
-import FavIcon02 from '../../assets/favorito_02.svg'
+import EmptyHeartIcon from '../../assets/favorito_02.svg'
+import FilledHeartIcon from '../../assets/favorito_01.svg'
+import { useGlobalContext } from '../../context'
 
-const HeroArticle = function ({ id, name, image, resourceURI }) {
+const Hero = function ({ id, name, image }) {
+  const { removeFavorite, addFavorite, favorites } = useGlobalContext()
+
   return (
     <Link to={`/hero/${id}`}>
       <article className='hero-container'>
-        <img src={image} alt={name} />
+        <img src={image} alt={name} id={`${id}portrait`} />
         <div className='info-wrapper'>
           <span>{name}</span>
           <img
-            src={FavIcon02}
-            alt='ícone não-favorito'
-            className='fav-icon02'
+            src={
+              favorites.find((item) => Number(item.id) === id)
+                ? FilledHeartIcon
+                : EmptyHeartIcon
+            }
+            alt={
+              favorites.find((item) => Number(item.id) === id)
+                ? 'icone favorito'
+                : 'ícone não-favorito'
+            }
+            className='favorite-icon'
+            id={id}
+            name={name}
+            onClick={
+              favorites.find((item) => Number(item.id) === id)
+                ? removeFavorite
+                : addFavorite
+            }
           />
         </div>
       </article>
@@ -21,4 +40,4 @@ const HeroArticle = function ({ id, name, image, resourceURI }) {
   )
 }
 
-export default HeroArticle
+export default Hero

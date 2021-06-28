@@ -1,6 +1,13 @@
-import React, { useState, useContext, useCallback, useEffect } from 'react'
+import React, {
+  useState,
+  useContext,
+  useCallback,
+  useEffect,
+  useReducer,
+} from 'react'
 import axios from 'axios'
 import paramsDefault from './utils/apiConnectionParams'
+import reducer from './reducer'
 
 const url = 'http://gateway.marvel.com/v1/public/characters'
 
@@ -11,18 +18,43 @@ const AppProvider = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState('')
   const [heroes, setHeroes] = useState([])
   const [alphabeticOrder, setAlphabeticOrder] = useState(true)
+  const [onlyFavorites, setOnlyFavorites] = useState(false)
 
-  let params = {
-    ...(searchTerm
-      ? { nameStartsWith: searchTerm, ...paramsDefault }
-      : { ...paramsDefault }),
+  const initialState = {
+    loading: false,
+    favorites: [],
+    amount: 0,
   }
 
-  params = {
-    ...(alphabeticOrder ? { ...params } : { orderBy: '-name', ...params }),
+  const [state, dispatch] = useReducer(reducer, initialState)
+
+  const removeFavorite = (e) => {
+    e.stopPropagation()
+    e.preventDefault()
+    const id = e.target.id
+    dispatch({ type: 'REMOVE_FAVORITE', payload: id })
+  }
+
+  const addFavorite = (e) => {
+    e.stopPropagation()
+    e.preventDefault()
+    const name = e.target.name
+    const id = e.target.id
+    const image = document.getElementById(`${id}portrait`).src
+    const hero = { name, id, image }
+    dispatch({ type: 'ADD_FAVORITE', payload: hero })
   }
 
   const fetchHeroes = useCallback(async () => {
+    let params = {
+      ...(searchTerm
+        ? { nameStartsWith: searchTerm, ...paramsDefault }
+        : { ...paramsDefault }),
+    }
+
+    params = {
+      ...(alphabeticOrder ? { ...params } : { orderBy: '-name', ...params }),
+    }
     setLoading(true)
     try {
       const response = await axios.get(url, {
@@ -64,6 +96,11 @@ const AppProvider = ({ children }) => {
         searchTerm,
         setAlphabeticOrder,
         alphabeticOrder,
+        ...state,
+        removeFavorite,
+        addFavorite,
+        setOnlyFavorites,
+        onlyFavorites,
       }}
     >
       {children}

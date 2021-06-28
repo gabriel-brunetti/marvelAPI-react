@@ -7,6 +7,7 @@ const Home = () => {
     <>
       <Header />
       <HeroesContainer />
+      <div className='footer'></div>
     </>
   )
 }

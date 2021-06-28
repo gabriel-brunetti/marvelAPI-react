@@ -1,6 +1,42 @@
+.singleHero-container {
+  background-color: rgb(212, 216, 206);
+  height: 100%;
+}
+
+.singleHero-header {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.singleHero-header > a {
+  display: flex;
+  align-items: center;
+}
+
+/* SEARCH FORM BRANCO */
+
+.singleHero-header > .search-container {
+  margin-bottom: 0;
+  background-color: rgb(255, 255, 255);
+  width: 50vw;
+}
+
+.singleHero-header .search-form > input {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.singleHero-header .search-form > input::placeholder {
+  color: black;
+}
+
 /* 
 --- HERO ARTICLE ---
 */
+
 .hero-section {
   width: 90vw;
   margin: 0 auto;
@@ -17,7 +53,7 @@
 /* INFO SECTION */
 .hero-info-wrapper {
   grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column-end: 4;
   display: flex;
   flex-direction: column;
 }

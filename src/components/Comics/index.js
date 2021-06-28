@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
 import './index.css'
 import axios from 'axios'
-import params from '../../utils/apiConnectionParams'
+import paramsDefault from '../../utils/apiConnectionParams'
 import Loading from '../Loading'
 
 export default function Comics({ url }) {
-  const [comic, setComic] = useState([])
+  const [comics, setComics] = useState([])
   const [loading, setLoading] = useState([])
 
   React.useEffect(() => {
+    let params = { orderBy: 'onsaleDate', ...paramsDefault }
     setLoading(true)
     async function fetchComic() {
       try {
@@ -17,19 +18,24 @@ export default function Comics({ url }) {
         })
         const data = response.data.data.results
         if (data) {
-          const { id, title, thumbnail } = data[0]
+          const newComic = data.map((item) => {
+            const { id, title, thumbnail } = item
 
-          const comic = {
-            id,
-            title,
-            image: `${thumbnail.path}/portrait_xlarge.${thumbnail.extension}`,
-          }
-          setComic(comic)
+            return {
+              id,
+              title,
+              image: `${thumbnail.path}/portrait_xlarge.${thumbnail.extension}`,
+            }
+          })
+          setComics(newComic)
+          setLoading(false)
         } else {
-          setComic(null)
+          setComics(null)
+          setLoading(false)
         }
       } catch (error) {
         console.log(error)
+        setLoading(false)
       }
       setLoading(false)
     }
@@ -41,8 +47,23 @@ export default function Comics({ url }) {
 
   return (
     <>
-      <img src={comic.image} alt={comic.title} className='comic-cover' />
-      <span>{comic.title}</span>
+      <div className='last-releases'>
+        <h4>Últimos lançamentos</h4>
+        <div className='comics-grid'>
+          {comics.slice(0, 10).map((comic) => {
+            return (
+              <article key={comic.id} className='comics'>
+                <img
+                  src={comic.image}
+                  alt={comic.title}
+                  className='comic-cover'
+                />
+                <span>{comic.title}</span>
+              </article>
+            )
+          })}
+        </div>
+      </div>
     </>
   )
 }

@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './index.css'
 import Hero from '../Hero'
 import Loading from '../Loading'
 import { useGlobalContext } from '../../context'
 
 export default function HeroesContainer() {
-  const { heroes, loading } = useGlobalContext()
+  const { heroes, loading, favorites, onlyFavorites } = useGlobalContext()
+
+  useEffect(() => {}, [favorites])
 
   if (loading) {
     return <Loading />
@@ -15,9 +17,19 @@ export default function HeroesContainer() {
   }
   return (
     <main className='heroes-container'>
-      {heroes.map((hero) => {
-        return <Hero key={hero.id} {...hero} />
-      })}
+      {onlyFavorites ? (
+        <>
+          {favorites.map((favorite) => {
+            return <Hero key={favorite.id} {...favorite} />
+          })}
+        </>
+      ) : (
+        <>
+          {heroes.map((hero) => {
+            return <Hero key={hero.id} {...hero} />
+          })}
+        </>
+      )}
     </main>
   )
 }

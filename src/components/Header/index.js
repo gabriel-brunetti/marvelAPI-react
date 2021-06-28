@@ -1,14 +1,21 @@
 import React from 'react'
+import './index.css'
 import MarvelIcon from '../../assets/logo.svg'
 import SearchForm from '../SearchForm'
-import './index.css'
 import HeroIcon from '../../assets/ic_heroi.svg'
-import FavIcon01 from '../../assets/favorito_01.svg'
-import FavIcon02 from '../../assets/favorito_02.svg'
+import filledHeart from '../../assets/favorito_01.svg'
+import emptyHeart from '../../assets/favorito_02.svg'
 import { useGlobalContext } from '../../context'
 
 const Header = () => {
-  const { alphabeticOrder, setAlphabeticOrder, heroes } = useGlobalContext()
+  const {
+    alphabeticOrder,
+    setAlphabeticOrder,
+    heroes,
+    setOnlyFavorites,
+    onlyFavorites,
+  } = useGlobalContext()
+
   const handleAlphabeticOrder = (e) => {
     if (alphabeticOrder === true) {
       e.checked = true
@@ -18,6 +25,14 @@ const Header = () => {
       setAlphabeticOrder(true)
     }
   }
+  const handleFavorite = (e) => {
+    if (onlyFavorites === false) {
+      setOnlyFavorites(true)
+    } else if (onlyFavorites === true) {
+      setOnlyFavorites(false)
+    }
+  }
+
   return (
     <>
       <section className='header'>
@@ -44,7 +59,12 @@ const Header = () => {
             />
             <span className='slider round'></span>
           </label>
-          <img src={FavIcon01} alt='ícone favorito' className='fav-icon' />
+          <img
+            src={onlyFavorites ? filledHeart : emptyHeart}
+            alt='ícone favorito'
+            className='fav-icon'
+            onClick={handleFavorite}
+          />
           <span className='fav-label'>Somente favoritos</span>
         </div>
       </div>
