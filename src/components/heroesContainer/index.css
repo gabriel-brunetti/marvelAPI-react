@@ -18,6 +18,10 @@
   justify-content: space-between;
 }
 
+.params-order > span {
+  font-size: 0.8rem;
+}
+
 .hero-icon,
 .fav-icon {
   width: 0.9rem;
@@ -32,7 +36,7 @@
   margin-left: 0.5rem;
 }
 .fav-icon {
-  width: 0.9rem;
+  width: 1.1rem;
 }
 
 /* HEROES CONTAINER */
@@ -41,4 +45,66 @@
   grid-gap: 0.7rem;
   grid-template-columns: repeat(4, minmax(100px, 1fr));
   grid-template-rows: repeat(5, 1fr);
+}
+
+/* ORDER INPUT */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 25px;
+  margin: 0 1rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(209, 209, 209);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 6px;
+  background-color: red;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.order-input:checked + .slider {
+  background-color: #ffdddd;
+}
+
+.order-input:focus + .slider {
+  box-shadow: 0 0 1px #ecbbbb;
+}
+
+.order-input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.round {
+  border-radius: 34px;
+}
+
+.round:before {
+  border-radius: 50%;
 }

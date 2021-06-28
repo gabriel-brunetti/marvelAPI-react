@@ -1,13 +1,8 @@
 import React, { useState, useContext, useCallback, useEffect } from 'react'
-import md5 from 'md5'
 import axios from 'axios'
+import paramsDefault from './utils/apiConnectionParams'
 
 const url = 'http://gateway.marvel.com/v1/public/characters'
-const publicKey = 'cbea2d04c5782aaafc323023acea74dd'
-const privateKey = 'ced775d6630c717b4fd6df6633c88184ea89e66b'
-const timestamp = Number(new Date())
-const hash = md5(timestamp + privateKey + publicKey)
-const paramsDefault = { ts: timestamp, apikey: publicKey, hash: hash }
 
 const AppContext = React.createContext()
 
@@ -15,6 +10,7 @@ const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(false)
   const [searchTerm, setSearchTerm] = useState('')
   const [heroes, setHeroes] = useState([])
+  const [alphabeticOrder, setAlphabeticOrder] = useState(true)
 
   let params = {
     ...(searchTerm
@@ -56,7 +52,16 @@ const AppProvider = ({ children }) => {
   }, [searchTerm, fetchHeroes])
 
   return (
-    <AppContext.Provider value={{ loading, heroes, setSearchTerm, searchTerm }}>
+    <AppContext.Provider
+      value={{
+        loading,
+        heroes,
+        setSearchTerm,
+        searchTerm,
+        setAlphabeticOrder,
+        alphabeticOrder,
+      }}
+    >
       {children}
     </AppContext.Provider>
   )

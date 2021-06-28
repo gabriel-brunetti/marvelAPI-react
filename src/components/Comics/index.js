@@ -1,15 +1,48 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
+import './index.css'
 import axios from 'axios'
-import md5 from 'md5'
+import params from '../../utils/apiConnectionParams'
+import Loading from '../Loading'
 
 export default function Comics({ url }) {
-  const publicKey = 'cbea2d04c5782aaafc323023acea74dd'
-  const privateKey = 'ced775d6630c717b4fd6df6633c88184ea89e66b'
-  const timestamp = Number(new Date())
-  const hash = md5(timestamp + privateKey + publicKey)
-  const paramsDefault = { ts: timestamp, apikey: publicKey, hash: hash }
-  const [comics, setComics] = useState([])
+  const [comic, setComic] = useState([])
   const [loading, setLoading] = useState([])
 
-  return <h2>Comics</h2>
+  React.useEffect(() => {
+    setLoading(true)
+    async function fetchComic() {
+      try {
+        const response = await axios.get(url, {
+          params,
+        })
+        const data = response.data.data.results
+        if (data) {
+          const { id, title, thumbnail } = data[0]
+
+          const comic = {
+            id,
+            title,
+            image: `${thumbnail.path}/portrait_xlarge.${thumbnail.extension}`,
+          }
+          setComic(comic)
+        } else {
+          setComic(null)
+        }
+      } catch (error) {
+        console.log(error)
+      }
+      setLoading(false)
+    }
+    fetchComic()
+  }, [url])
+  if (loading) {
+    return <Loading />
+  }
+
+  return (
+    <>
+      <img src={comic.image} alt={comic.title} className='comic-cover' />
+      <span>{comic.title}</span>
+    </>
+  )
 }

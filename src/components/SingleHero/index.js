@@ -3,21 +3,16 @@ import './index.css'
 import Loading from '../Loading'
 import { useParams, Link } from 'react-router'
 import axios from 'axios'
-import md5 from 'md5'
 import FavIcon02 from '../../assets/favorito_02.svg'
 import QuadrinhoIcon from '../../assets/ic_quadrinhos.svg'
 import MoviesIcon from '../../assets/ic_trailer.svg'
 import RatingIcons from '../../assets/avaliacao_on.svg'
 import Comics from '../Comics'
+import params from '../../utils/apiConnectionParams'
 
 export default function SingleHero() {
   const { id } = useParams()
   const url = `http://gateway.marvel.com/v1/public/characters/${id}`
-  const publicKey = 'cbea2d04c5782aaafc323023acea74dd'
-  const privateKey = 'ced775d6630c717b4fd6df6633c88184ea89e66b'
-  const timestamp = Number(new Date())
-  const hash = md5(timestamp + privateKey + publicKey)
-  const params = { ts: timestamp, apikey: publicKey, hash: hash }
   const [loading, setLoading] = React.useState(false)
   const [hero, setHero] = React.useState(null)
 
@@ -59,7 +54,7 @@ export default function SingleHero() {
 
     return (
       <section className='hero-section'>
-        <div className='info-wrapper'>
+        <div className='hero-info-wrapper'>
           <div className='info-title'>
             <h3>{name}</h3>
             <img
@@ -95,10 +90,23 @@ export default function SingleHero() {
             </div>
           </div>
         </div>
-        <img src={image} alt={name} className='hero-portrait' />
+        <div className='portrait-wrapper'>
+          <img src={image} alt={name} className='hero-portrait' />
+        </div>
         <div className='last-releases'>
           <h4>Últimos lançamentos</h4>
-          {/* <Comics url={comics.collectionURI} /> */}
+          <div className='comics-grid'>
+            {comics.items.slice(0, 12).map((item) => {
+              const url = item.resourceURI
+              const comicIdPosition = url.search('comics/') + 7
+              const comicId = url.slice(comicIdPosition, url.length)
+              return (
+                <article key={comicId} className='comics'>
+                  <Comics url={item.resourceURI} />
+                </article>
+              )
+            })}
+          </div>
         </div>
       </section>
     )
