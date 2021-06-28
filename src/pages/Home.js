@@ -4,10 +4,10 @@ import HeroesContainer from '../components/HeroesContainer'
 
 const Home = () => {
   return (
-    <main>
+    <>
       <Header />
       <HeroesContainer />
-    </main>
+    </>
   )
 }
 

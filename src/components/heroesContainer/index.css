@@ -1,45 +1,10 @@
-/* PARAMS WRAPPER */
-.params-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-
-.params-wrapper > span {
-  color: gray;
-  font-size: 0.75rem;
-}
-
-.params-order {
-  color: red;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.params-order > span {
-  font-size: 0.8rem;
-}
-
-.hero-icon,
-.fav-icon {
-  width: 0.9rem;
-  margin-right: 0.5rem;
-}
-.order-label,
-.fav-label {
-  font-size: 0.75rem;
-}
-.order-input {
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
-}
-.fav-icon {
-  width: 1.1rem;
-}
-
 /* HEROES CONTAINER */
+main {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
 .heroes-container {
   display: grid;
   grid-gap: 0.7rem;

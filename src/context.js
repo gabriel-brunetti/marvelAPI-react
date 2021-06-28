@@ -18,6 +18,10 @@ const AppProvider = ({ children }) => {
       : { ...paramsDefault }),
   }
 
+  params = {
+    ...(alphabeticOrder ? { ...params } : { orderBy: '-name', ...params }),
+  }
+
   const fetchHeroes = useCallback(async () => {
     setLoading(true)
     try {
@@ -45,7 +49,7 @@ const AppProvider = ({ children }) => {
       console.error(error)
       setLoading(false)
     }
-  }, [searchTerm])
+  }, [searchTerm, alphabeticOrder])
 
   useEffect(() => {
     fetchHeroes()
