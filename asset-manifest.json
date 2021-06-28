@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/luizalabs-teste/static/css/main.ec245082.chunk.css",
-    "main.js": "/luizalabs-teste/static/js/main.21a7f4e1.chunk.js",
-    "main.js.map": "/luizalabs-teste/static/js/main.21a7f4e1.chunk.js.map",
+    "main.js": "/luizalabs-teste/static/js/main.fb5e4b21.chunk.js",
+    "main.js.map": "/luizalabs-teste/static/js/main.fb5e4b21.chunk.js.map",
     "runtime-main.js": "/luizalabs-teste/static/js/runtime-main.8d4dd20e.js",
     "runtime-main.js.map": "/luizalabs-teste/static/js/runtime-main.8d4dd20e.js.map",
     "static/js/2.0a9c4142.chunk.js": "/luizalabs-teste/static/js/2.0a9c4142.chunk.js",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.8d4dd20e.js",
     "static/js/2.0a9c4142.chunk.js",
     "static/css/main.ec245082.chunk.css",
-    "static/js/main.21a7f4e1.chunk.js"
+    "static/js/main.fb5e4b21.chunk.js"
   ]
 }
