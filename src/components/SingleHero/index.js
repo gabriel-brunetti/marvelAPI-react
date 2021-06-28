@@ -128,7 +128,7 @@ export default function SingleHero() {
               id={`${id}portrait`}
             />
           </div>
-          <Comics url={comics.collectionURI} />
+          <Comics url={`https${comics.collectionURI}`} />
         </section>
       </div>
     )
