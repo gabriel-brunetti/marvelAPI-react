@@ -129,9 +129,9 @@ export default function SingleHero() {
             />
           </div>
           <Comics
-            url={`https${comics.collectionURI.slice(
+            url={`https${hero.comics.collectionURI.slice(
               4,
-              comics.collectionURI.length
+              hero.comics.collectionURI.length
             )}`}
           />
         </section>
