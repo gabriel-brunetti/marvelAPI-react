@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/luizalabs-teste/static/css/main.07b46ce4.chunk.css",
-    "main.js": "/luizalabs-teste/static/js/main.1f5cad16.chunk.js",
-    "main.js.map": "/luizalabs-teste/static/js/main.1f5cad16.chunk.js.map",
+    "main.css": "/luizalabs-teste/static/css/main.879c4be0.chunk.css",
+    "main.js": "/luizalabs-teste/static/js/main.06ca981c.chunk.js",
+    "main.js.map": "/luizalabs-teste/static/js/main.06ca981c.chunk.js.map",
     "runtime-main.js": "/luizalabs-teste/static/js/runtime-main.8d4dd20e.js",
     "runtime-main.js.map": "/luizalabs-teste/static/js/runtime-main.8d4dd20e.js.map",
     "static/js/2.0a9c4142.chunk.js": "/luizalabs-teste/static/js/2.0a9c4142.chunk.js",
     "static/js/2.0a9c4142.chunk.js.map": "/luizalabs-teste/static/js/2.0a9c4142.chunk.js.map",
     "index.html": "/luizalabs-teste/index.html",
-    "static/css/main.07b46ce4.chunk.css.map": "/luizalabs-teste/static/css/main.07b46ce4.chunk.css.map",
+    "static/css/main.879c4be0.chunk.css.map": "/luizalabs-teste/static/css/main.879c4be0.chunk.css.map",
     "static/js/2.0a9c4142.chunk.js.LICENSE.txt": "/luizalabs-teste/static/js/2.0a9c4142.chunk.js.LICENSE.txt",
     "static/media/avaliacao_on.b50ecbbf.svg": "/luizalabs-teste/static/media/avaliacao_on.b50ecbbf.svg",
     "static/media/favorito_01.4032fb6a.svg": "/luizalabs-teste/static/media/favorito_01.4032fb6a.svg",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.8d4dd20e.js",
     "static/js/2.0a9c4142.chunk.js",
-    "static/css/main.07b46ce4.chunk.css",
-    "static/js/main.1f5cad16.chunk.js"
+    "static/css/main.879c4be0.chunk.css",
+    "static/js/main.06ca981c.chunk.js"
   ]
 }
