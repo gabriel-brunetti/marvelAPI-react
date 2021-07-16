@@ -1,4 +1,4 @@
-# LuizaLabs - Marvel API teste
+Marvel API teste
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
