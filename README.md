@@ -7,6 +7,10 @@ Projeto desenvolvido como estudo de ReactJS, utilizando conceitos de:
 - Redux, Componentes
 - React Router
 
+## Acessando o deploy do projeto
+
+O projeto pode ser acessado e visualizado rodando neste [link](https://gabriel-brunetti.github.io/luizalabs-teste/) - deploy no github pages.
+
 ## Como reproduzir o ambiente de desenvolvimento
 
 1. Após clonar o repositório em sua máquina, instalar as dependências utilizando **npm install** ou **yarn install**
@@ -17,7 +21,4 @@ Projeto desenvolvido como estudo de ReactJS, utilizando conceitos de:
 >  mv .env.copy .env
 4. Executar o sistema utilizando **npm start** ou **yarn start** e acessar a porta designada em seu servidor local/localhost.
 
-## Acessando o deploy do projeto
-
-O projeto pode ser acessado e visualizado rodando neste [link](https://gabriel-brunetti.github.io/luizalabs-teste/) - deploy no github pages.
 
