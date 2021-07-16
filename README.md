@@ -1,6 +1,11 @@
 # Marvel API teste
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto desenvolvido como estudo de ReactJS, utilizando conceitos de: 
+- ContextAPI
+- Estlização de Componentes
+- Variável de Configuração
+- Redux, Componentes
+- React Router
 
 ## Como reproduzir o ambiente de desenvolvimento
 
