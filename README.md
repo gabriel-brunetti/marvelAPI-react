@@ -1,4 +1,4 @@
-Marvel API teste
+# Marvel API teste
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -11,7 +11,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 > 	**Em um terminal bash:**
 >  mv .env.copy .env
 4. Executar o sistema utilizando **npm start** ou **yarn start** e acessar a porta designada em seu servidor local/localhost.
-
 
 ## Acessando o deploy do projeto
 
