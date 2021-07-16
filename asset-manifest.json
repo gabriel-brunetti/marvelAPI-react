@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/luizalabs-teste/static/css/main.879c4be0.chunk.css",
-    "main.js": "/luizalabs-teste/static/js/main.06ca981c.chunk.js",
-    "main.js.map": "/luizalabs-teste/static/js/main.06ca981c.chunk.js.map",
-    "runtime-main.js": "/luizalabs-teste/static/js/runtime-main.8d4dd20e.js",
-    "runtime-main.js.map": "/luizalabs-teste/static/js/runtime-main.8d4dd20e.js.map",
-    "static/js/2.0a9c4142.chunk.js": "/luizalabs-teste/static/js/2.0a9c4142.chunk.js",
-    "static/js/2.0a9c4142.chunk.js.map": "/luizalabs-teste/static/js/2.0a9c4142.chunk.js.map",
-    "index.html": "/luizalabs-teste/index.html",
-    "static/css/main.879c4be0.chunk.css.map": "/luizalabs-teste/static/css/main.879c4be0.chunk.css.map",
-    "static/js/2.0a9c4142.chunk.js.LICENSE.txt": "/luizalabs-teste/static/js/2.0a9c4142.chunk.js.LICENSE.txt",
-    "static/media/avaliacao_on.b50ecbbf.svg": "/luizalabs-teste/static/media/avaliacao_on.b50ecbbf.svg",
-    "static/media/favorito_01.4032fb6a.svg": "/luizalabs-teste/static/media/favorito_01.4032fb6a.svg",
-    "static/media/favorito_02.d84c4d2f.svg": "/luizalabs-teste/static/media/favorito_02.d84c4d2f.svg",
-    "static/media/ic_busca_menor.7d4fff01.svg": "/luizalabs-teste/static/media/ic_busca_menor.7d4fff01.svg",
-    "static/media/ic_heroi.401cb5f1.svg": "/luizalabs-teste/static/media/ic_heroi.401cb5f1.svg",
-    "static/media/ic_quadrinhos.7e8c3213.svg": "/luizalabs-teste/static/media/ic_quadrinhos.7e8c3213.svg",
-    "static/media/ic_trailer.a3eecf66.svg": "/luizalabs-teste/static/media/ic_trailer.a3eecf66.svg",
-    "static/media/logo.66aae771.svg": "/luizalabs-teste/static/media/logo.66aae771.svg",
-    "static/media/logo_menor.55b92de4.svg": "/luizalabs-teste/static/media/logo_menor.55b92de4.svg"
+    "main.css": "/marvelAPI-react/static/css/main.879c4be0.chunk.css",
+    "main.js": "/marvelAPI-react/static/js/main.c34b2008.chunk.js",
+    "main.js.map": "/marvelAPI-react/static/js/main.c34b2008.chunk.js.map",
+    "runtime-main.js": "/marvelAPI-react/static/js/runtime-main.948d2b49.js",
+    "runtime-main.js.map": "/marvelAPI-react/static/js/runtime-main.948d2b49.js.map",
+    "static/js/2.0a9c4142.chunk.js": "/marvelAPI-react/static/js/2.0a9c4142.chunk.js",
+    "static/js/2.0a9c4142.chunk.js.map": "/marvelAPI-react/static/js/2.0a9c4142.chunk.js.map",
+    "index.html": "/marvelAPI-react/index.html",
+    "static/css/main.879c4be0.chunk.css.map": "/marvelAPI-react/static/css/main.879c4be0.chunk.css.map",
+    "static/js/2.0a9c4142.chunk.js.LICENSE.txt": "/marvelAPI-react/static/js/2.0a9c4142.chunk.js.LICENSE.txt",
+    "static/media/avaliacao_on.b50ecbbf.svg": "/marvelAPI-react/static/media/avaliacao_on.b50ecbbf.svg",
+    "static/media/favorito_01.4032fb6a.svg": "/marvelAPI-react/static/media/favorito_01.4032fb6a.svg",
+    "static/media/favorito_02.d84c4d2f.svg": "/marvelAPI-react/static/media/favorito_02.d84c4d2f.svg",
+    "static/media/ic_busca_menor.7d4fff01.svg": "/marvelAPI-react/static/media/ic_busca_menor.7d4fff01.svg",
+    "static/media/ic_heroi.401cb5f1.svg": "/marvelAPI-react/static/media/ic_heroi.401cb5f1.svg",
+    "static/media/ic_quadrinhos.7e8c3213.svg": "/marvelAPI-react/static/media/ic_quadrinhos.7e8c3213.svg",
+    "static/media/ic_trailer.a3eecf66.svg": "/marvelAPI-react/static/media/ic_trailer.a3eecf66.svg",
+    "static/media/logo.66aae771.svg": "/marvelAPI-react/static/media/logo.66aae771.svg",
+    "static/media/logo_menor.55b92de4.svg": "/marvelAPI-react/static/media/logo_menor.55b92de4.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8d4dd20e.js",
+    "static/js/runtime-main.948d2b49.js",
     "static/js/2.0a9c4142.chunk.js",
     "static/css/main.879c4be0.chunk.css",
-    "static/js/main.06ca981c.chunk.js"
+    "static/js/main.c34b2008.chunk.js"
   ]
 }
