@@ -9,7 +9,7 @@ Projeto desenvolvido como estudo de ReactJS, utilizando conceitos de:
 
 ## Acessando o deploy do projeto
 
-O projeto pode ser acessado e visualizado rodando neste [link](https://gabriel-brunetti.github.io/luizalabs-teste/) - deploy no github pages.
+O projeto pode ser acessado e visualizado rodando neste [link](https://gabriel-brunetti.github.io/marvelAPI-react/) - deploy no github pages.
 
 ## Como reproduzir o ambiente de desenvolvimento
 
