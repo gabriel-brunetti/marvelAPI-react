@@ -128,9 +128,7 @@ export default function SingleHero() {
               id={`${id}portrait`}
             />
           </div>
-          <Comics
-            url={`https://cors-anywhere.herokuapp.com/${comics.collectionURI}`}
-          />
+          <Comics url={'https' + comics.collectionURI.substring(4)} />
         </section>
       </div>
     )

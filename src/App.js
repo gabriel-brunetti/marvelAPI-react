@@ -15,7 +15,7 @@ const getStorageFavorites = () => {
 function App() {
   return (
     <>
-      <Router basename='/luizalabs-teste'>
+      <Router basename='/marvelAPI-react'>
         <Switch>
           <Route exact path='/'>
             <Home />
